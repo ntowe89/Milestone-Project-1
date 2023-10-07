@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="main">
+        <div id="playing">
+            <div id="div1">
+                <h1>Yahtzee</h1>
+                <input type="submit" value="ROLL DICE" id="rollButton">
+                <p id = "promptMessage"></p>
+            </div>
+            <div id="rolledDiv">
+            
+            </div>
+            <div id="keptDiv">
+    
+            </div>
+        </div>
+        <div id="scoring">
+            <h1>Score</h1>
+            <table>
+                <tr>
+                    <th>UPPER SECTION</th>
+                    <th>HOW TO SCORE</th>
+                    <th>SCORE</th>
+                </tr>
+                <tr >
+                    <td> 
+                        <input type="submit" value="ACES" id="aces"  class="scoreButton">
+                        <img src="assets/dice_1.png" alt="Picture of dice face 1" id="scoreDice"> = 1
+                    </td>
+                    <td>COUNT AND ADD <br> ONLY ACES</td>
+                    <td id="recordAces"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="TWOS"  id="twos"  class="scoreButton">
+                        <img src="assets/dice_2.png" alt="Picture of dice face two" id="scoreDice"> = 2</td>
+                    <td>COUNT AND ADD <br> ONLY TWOS</td>
+                    <td id="recordTwos"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="THREES"  id="threes"  class="scoreButton">
+                        <img src="assets/dice_3.png" alt="Picture of dice face three" id="scoreDice"> = 3</td>
+                    <td>COUNT AND ADD <br> ONLY THREES</td>
+                    <td id="recordThrees"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="FOURS"  id="fours"  class="scoreButton">
+                        <img src="assets/dice_4.png" alt="Picture of dice face four" id="scoreDice"> = 4</td>
+                    <td>COUNT AND ADD <br> ONLY FOURS</td>   
+                    <td id="recordFours"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="FIVES"  id="fives"  class="scoreButton">
+                        <img src="assets/dice_5.png" alt="Picture of dice face five" id="scoreDice"> = 5 </td>
+                    <td>COUNT AND ADD <br> ONLY FIVES</td>   
+                    <td id="recordFives"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="SIXES" id="sixes" class="scoreButton">
+                        <img src="assets/dice_6.png" alt="Picture of dice face six" id="scoreDice"> = 6 </td>
+                    <td>COUNT AND ADD <br> ONLY SIXES</td>   
+                    <td id="recordSixes"></td>
+                </tr>
+                <tr>
+                    <td>TOTAL SCORE</td>
+                    <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
+                    <td id="recordUpperScore"></td>
+                </tr>
+                <tr>
+                    <td>BONUS <br> IF TOTAL SCORE IS 63 OR OVER</td>
+                    <td>SCORE 35</td>
+                    <td id="recordUpperBonus"></td>
+                </tr>
+                <tr>
+                    <td> TOTAL <br> OF UPPER SECTION</td>
+                    <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
+                    <td id="recordUpperTotalScore"></td>
+                </tr>
+                <tr>
+                    <td>LOWER SECTION</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="3 OF A KIND" id="threeOfAKind"  class="scoreButton"> </td>
+                    <td>ADD TOTAL <br> OF ALL DICE</td>
+                    <td id="threeKind"></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="4 OF A KIND" id="fourOfAKind"   class="scoreButton"> </td>
+                    <td>ADD TOTAL <br> OF ALL DICE</td>
+                    <td id="fourKind"></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="FULL HOUSE" id="fullHouse"  class="scoreButton"> </td>
+                    <td>SCORE 25</td>
+                    <td id="FH"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="SM STRAIGHT" id="smallStraight"   class="scoreButton"> 
+                        <br> SEQUENCE OF FOUR</td>
+                    <td>SCORE 30</td>
+                    <td id="smStraight"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="LG STRAIGHT" id="largeStraight"   class="scoreButton">
+                        <br> SEQUENCE OF FIVE</td>
+                    <td>SCORE 40</td>
+                    <td id = "lgStraight"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="YAHTZEE" id="firstYahtzee"  class="scoreButton">
+                        <br> 5 OF A KIND</td>
+                    <td>SCORE 50</td>
+                    <td id="recordFirstYahtzee"></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="CHANCE" id="chance"  class ="scoreButton"> </td>
+                    <td>SCORE TOTAL <br> OF ALL 5 DICE</td>
+                    <td id="chances"></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="YAHTZEE BONUS" id="yahtzeeBonus"  class="scoreButton"> </td>
+                    <td>1 FOR EACH BONUS <br> UP TO THREE </td>
+                    <td id="bonusYahtzee"></td>
+                </tr>
+                <tr>
+                    <td>BONUS</td>
+                    <td>SCORE 100 PER <br> ADDITIONAL YAHTZEE</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TOTAL <br> OF LOWER SECTION</td>
+                    <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>GRAND TOTAL</td>
+                    <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    
+    
+
+    <script src ="index.js"></script>
+    <script src ="rollDice.js"></script>
+    <script src ="displayDice.js"></script>
+    <script src="upperScore.js"></script>
+    <script src="lowerScore.js"></script>
+</body>
+</html>
