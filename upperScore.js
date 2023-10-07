@@ -8,17 +8,23 @@ let upperTotal = null
 let one = null
 let myAces = document.getElementById("aces")
 myAces.addEventListener("click", myFunction => {
-    if(one === null){
-        one = (oneArray.length*1).toString()
-        let a = document.getElementById("recordAces")
-        a.innerHTML = one
-        reset()
-        addUpper()
-        rolledDiv.innerHTML = ""
-        keptDiv.innerHTML = ""
+    let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
+    if(checkIfAllDiceSelected === 5){
+        if(one === null){
+            one = (oneArray.length*1).toString()
+            let a = document.getElementById("recordAces")
+            a.innerHTML = one
+            reset()
+            addUpper()
+            rolledDiv.innerHTML = ""
+            keptDiv.innerHTML = ""
+        }
+        else{
+            alert("The aces spot has already been used, please make another selection")
+        }
     }
     else{
-        alert("The aces spot has already been used, please make another selection")
+        alert("Make sure to select all five dice before adding score")
     }
 })
 
@@ -26,17 +32,23 @@ myAces.addEventListener("click", myFunction => {
 let two = null
 let myTwos = document.getElementById("twos")
 myTwos.addEventListener("click", myFunction => {
-    if(two === null){
-        two = (twoArray.length*2).toString()
-        let a = document.getElementById("recordTwos")
-        a.innerHTML = two
-        reset()
-        addUpper()
-        rolledDiv.innerHTML = ""
-        keptDiv.innerHTML = ""
+    let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
+    if(checkIfAllDiceSelected === 5){
+        if(two === null){
+            two = (twoArray.length*2).toString()
+            let a = document.getElementById("recordTwos")
+            a.innerHTML = two
+            reset()
+            addUpper()
+            rolledDiv.innerHTML = ""
+            keptDiv.innerHTML = ""
+        }
+        else{
+            alert("The twos spot has already been used, please make another selection")
+        }
     }
     else{
-        alert("The twos spot has already been used, please make another selection")
+        alert("Make sure to select all five dice before adding score")
     }
 })
 
@@ -44,17 +56,23 @@ myTwos.addEventListener("click", myFunction => {
 let three = null
 let myThrees = document.getElementById("threes")
 myThrees.addEventListener("click", myFunction => {
-    if(three === null){
-        three = (threeArray.length*3).toString()
-        let a = document.getElementById("recordThrees")
-        a.innerHTML = three
-        reset()
-        addUpper()
-        rolledDiv.innerHTML = ""
-        keptDiv.innerHTML = ""
+    let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
+    if(checkIfAllDiceSelected === 5){
+        if(three === null){
+            three = (threeArray.length*3).toString()
+            let a = document.getElementById("recordThrees")
+            a.innerHTML = three
+            reset()
+            addUpper()
+            rolledDiv.innerHTML = ""
+            keptDiv.innerHTML = ""
+        }
+        else{
+            alert("The threes spot has already been used, please make another selection")
+        }
     }
     else{
-        alert("The threes spot has already been used, please make another selection")
+        alert("Make sure to select all five dice before adding score")
     }
 })
 
@@ -63,7 +81,9 @@ myThrees.addEventListener("click", myFunction => {
 let four = null
 let myFours = document.getElementById("fours")
 myFours.addEventListener("click", myFunction => {
-    if(four === null){
+    let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
+    if(checkIfAllDiceSelected === 5){
+        if(four === null){
         four = (fourArray.length*4).toString()
         let a = document.getElementById("recordFours")
         a.innerHTML = four
@@ -71,9 +91,13 @@ myFours.addEventListener("click", myFunction => {
         addUpper()
         rolledDiv.innerHTML = ""
         keptDiv.innerHTML = ""
+        }
+        else{
+            alert("The fours spot has already been used, please make another selection")
+        }
     }
     else{
-        alert("The fours spot has already been used, please make another selection")
+        alert("Make sure to select all five dice before adding score")
     }
 })
 
@@ -82,17 +106,23 @@ myFours.addEventListener("click", myFunction => {
 let five = null
 let myFives = document.getElementById("fives")
 myFives.addEventListener("click", myFunction => {
-    if(five === null){
-        five = (fiveArray.length*5).toString()
-        let a = document.getElementById("recordFives")
-        a.innerHTML = five
-        reset()
-        addUpper()
-        rolledDiv.innerHTML = ""
-        keptDiv.innerHTML = ""
+    let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
+    if(checkIfAllDiceSelected === 5){
+        if(five === null){
+            five = (fiveArray.length*5).toString()
+            let a = document.getElementById("recordFives")
+            a.innerHTML = five
+            reset()
+            addUpper()
+            rolledDiv.innerHTML = ""
+            keptDiv.innerHTML = ""
+        }
+        else{
+            alert("The fives spot has already been used, please make another selection")
+        }
     }
     else{
-        alert("The fives spot has already been used, please make another selection")
+        alert("Make sure to select all five dice before adding score")
     }
 })
 
@@ -101,17 +131,23 @@ myFives.addEventListener("click", myFunction => {
 let six = null
 let mySixes = document.getElementById("sixes")
 mySixes.addEventListener("click", myFunction => {
-    if(six === null){
-        six = (sixArray.length*6).toString()
-        let a = document.getElementById("recordSixes")
-        a.innerHTML = six
-        reset()
-        addUpper()
-        rolledDiv.innerHTML = ""
-        keptDiv.innerHTML = ""
+    let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
+    if(checkIfAllDiceSelected === 5){
+        if(six === null){
+            six = (sixArray.length*6).toString()
+            let a = document.getElementById("recordSixes")
+            a.innerHTML = six
+            reset()
+            addUpper()
+            rolledDiv.innerHTML = ""
+            keptDiv.innerHTML = ""
+        }
+        else{
+            alert("The sixes spot has already been used, please make another selection")
+        }
     }
     else{
-        alert("The sixes spot has already been used, please make another selection")
+        alert("Make sure to select all five dice before adding score")
     }
 })
 
@@ -131,6 +167,7 @@ function addUpper(){
     let a = document.getElementById("recordUpperScore")
     if(one != null && two != null && three != null && four != null && five != null && six != null){
         upperTotal = Number(one) + Number(two) + Number(three) + Number(four) + Number(five) + Number(six)
+        totalScore()
         if(upperTotal >= 63){
             
             a.innerHTML = ((upperTotal.toString()))
