@@ -1,5 +1,22 @@
 let numberOfYahtzees = null
 let lowerTotal = null
+let bestScore = 0
+
+
+//DOM select for each score
+let thisThreeOfAKind = document.getElementById("threeKind")
+let thisFourOfAKind = document.getElementById("fourKind")
+let thisFullHouse = document.getElementById("FH")
+let thisSmallStraight = document.getElementById("smStraight")
+let thisLargeStraight = document.getElementById("lgStraight")
+let thisYahtzee = document.getElementById("recordFirstYahtzee")
+let thisYahtzeeBonus = document.getElementById("bonusYahtzee")
+let thisBonus = document.getElementById("bonus")
+let thisChance = document.getElementById("chances")
+let thisLowerTotal = document.getElementById("lowerScore")
+let thisTotalScore = document.getElementById("grandTotal")
+let thisBestGmae = document.getElementById("bestGame")
+
 
 //3 of a kind 
 let threeOfkind = null
@@ -9,8 +26,7 @@ myThreeOfAKind.addEventListener("click", myFunction => {
     if(threeOfkind === null){
         if(checkIfAllDiceSelected === 5){
             if(oneArray.length >= 3 || twoArray.length >= 3 || threeArray.length >= 3 || fourArray.length >= 3 || fiveArray.length >= 3 || sixArray.length >= 3){
-                let d = document.getElementById("threeKind")
-                d.innerHTML= totalDice()
+                thisThreeOfAKind.innerHTML= totalDice()
                 threeOfkind = Number(totalDice())
                 reset()
                 rolledDiv.innerHTML = ""
@@ -19,8 +35,7 @@ myThreeOfAKind.addEventListener("click", myFunction => {
                 
             }
             else{
-                let d = document.getElementById("threeKind")
-                d.innerHTML= "0"
+                thisThreeOfAKind.innerHTML= "0"
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
@@ -45,8 +60,7 @@ myFourOfAKind.addEventListener("click", myFunction => {
     if(fourOfkind === null){
         if(checkIfAllDiceSelected === 5){
             if(oneArray.length >= 4 || twoArray.length >= 4 || threeArray.length >= 4 || fourArray.length >= 4 || fiveArray.length >= 4 || sixArray.length >= 4){
-                let d = document.getElementById("fourKind")
-                d.innerHTML= totalDice()
+                thisFourOfAKind.innerHTML= totalDice()
                 fourOfkind = Number(totalDice())
                 reset()
                 rolledDiv.innerHTML = ""
@@ -55,8 +69,7 @@ myFourOfAKind.addEventListener("click", myFunction => {
                 
             }
             else{
-                let d = document.getElementById("fourKind")
-                d.innerHTML= "0"
+                thisFourOfAKind.innerHTML= "0"
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
@@ -81,13 +94,9 @@ myFullHouse.addEventListener("click", myFunction => {
     let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
     if(oneFullHouse === null){
         if(checkIfAllDiceSelected === 5){
-            console.log("all five dice were selected")
             if(oneArray.length === 2 || twoArray.length === 2 || threeArray.length === 2 || fourArray.length === 2 || fiveArray.length === 2 || sixArray.length === 2){
-                console.log("First IF was successful")
                 if(oneArray.length === 3 || twoArray.length === 3 || threeArray.length === 3 || fourArray.length === 3 || fiveArray.length === 3 || sixArray.length === 3){
-                    console.log("second IF was S")
-                    let f1 = document.getElementById("FH")
-                    f1.innerHTML = "25"
+                    thisFullHouse.innerHTML = "25"
                     oneFullHouse = 25
                     reset()
                     rolledDiv.innerHTML = ""
@@ -95,8 +104,7 @@ myFullHouse.addEventListener("click", myFunction => {
                     addLower()
                 }
                 else{
-                    let f2 = document.getElementById("FH")
-                    f2.innerHTML = "0"
+                    thisFullHouse.innerHTML = "0"
                     oneFullHouse = 0
                     reset()
                     rolledDiv.innerHTML = ""
@@ -105,8 +113,7 @@ myFullHouse.addEventListener("click", myFunction => {
                 }
             }
             else{
-                let f2 = document.getElementById("FH")
-                f2.innerHTML = "0"
+                thisFullHouse.innerHTML = "0"
                 oneFullHouse = 0
                 reset()
                 rolledDiv.innerHTML = ""
@@ -132,27 +139,24 @@ mySmallStraight.addEventListener("click", myFunction => {
     let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
     if(smallSt === null){
         if(checkIfAllDiceSelected === 5){
-            if(oneArray.length >= 1 && twoArray.length >= 1 && threeArray >= 1 && fourArray.length >= 1){
-                let s = document.getElementById("smStraight")
-                s.innerHTML = "30"
+            if(oneArray.length >= 1 && twoArray.length >= 1 && threeArray.length >= 1 && fourArray.length >= 1){
+                thisSmallStraight.innerHTML = "30"
                 smallSt = 30
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
                 addLower()
             }
-            else if(twoArray.length >= 1 && threeArray >= 1 && fourArray.length >= 1 && fiveArray.length >= 1){
-                let s = document.getElementById("smStraight")
-                s.innerHTML = "30"
+            else if(twoArray.length >= 1 && threeArray.length >= 1 && fourArray.length >= 1 && fiveArray.length >= 1){
+                thisSmallStraight.innerHTML = "30"
                 smallSt = 30
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
                 addLower()
             }
-            else if(threeArray >= 1 && fourArray.length >= 1 && fiveArray.length >= 1 && sixArray.length >= 1){
-                let s = document.getElementById("smStraight")
-                s.innerHTML = "30"
+            else if(threeArray.length >= 1 && fourArray.length >= 1 && fiveArray.length >= 1 && sixArray.length >= 1){
+                thisSmallStraight.innerHTML = "30"
                 smallSt = 30
                 reset()
                 rolledDiv.innerHTML = ""
@@ -160,8 +164,7 @@ mySmallStraight.addEventListener("click", myFunction => {
                 addLower()
             }
             else{
-                let s = document.getElementById("smStraight")
-                s.innerHTML = "0"
+                thisSmallStraight.innerHTML = "0"
                 smallSt = 0
                 reset()
                 rolledDiv.innerHTML = ""
@@ -188,8 +191,7 @@ myLargeStraight.addEventListener("click", myFunction => {
     if(oneLargeStraight === null){
         if(checkIfAllDiceSelected === 5){
             if(twoArray.length === 1 && threeArray.length === 1 && fourArray.length === 1 && fiveArray.length === 1 && sixArray.length === 1){
-                let c1 = document.getElementById("lgStraight")
-                c1.innerHTML = "40"
+                thisLargeStraight.innerHTML = "40"
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
@@ -197,8 +199,7 @@ myLargeStraight.addEventListener("click", myFunction => {
                 addLower()
             }
             else if(oneArray.length === 1 && twoArray.length === 1 && threeArray.length === 1 && fourArray.length === 1 && fiveArray.length === 1){
-                let c2 = document.getElementById("lgStraight")
-                c2.innerHTML = "40"
+                thisLargeStraight.innerHTML = "40"
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
@@ -206,9 +207,7 @@ myLargeStraight.addEventListener("click", myFunction => {
                 addLower()
             }
             else{
-                console.log("else")
-                let c3 = document.getElementById("lgStraight")
-                c3.innerHTML = "0"
+                thisLargeStraight.innerHTML = "0"
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
@@ -235,8 +234,7 @@ myYahtzee.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(oneYahtzee === null){
             if(oneArray.length === 5 || twoArray.length === 5 || threeArray.length === 5 || fourArray.length === 5 || fiveArray.length === 5 || sixArray.length === 5){
-                let c = document.getElementById("recordFirstYahtzee")
-                c.innerHTML = "50"
+                thisYahtzee.innerHTML = "50"
                 numberOfYahtzees++
                 oneYahtzee = 50
                 reset()
@@ -245,19 +243,18 @@ myYahtzee.addEventListener("click", myFunction => {
                 addLower()
             }
             else{
-                let c = document.getElementById("recordFirstYahtzee")
-                c.innerHTML = "0"
+                thisYahtzee.innerHTML = "0"
                 oneYahtzee = 0
                 numberOfYahtzees = 0
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
                 //make yahtzee bonus zero as well 
-                let b = document.getElementById("bonusYahtzee")
-                b.innerHTML = "0"
+                thisYahtzeeBonus.innerHTML = "0"
                 numberOfYahtzees = 0
-                let z = document.getElementById("bonus")
-                z.innerHTML = "0"
+                bonusYahtzeeTracker = 0
+                //make bonus zero as well
+                thisBonus.innerHTML = "0"
                 addLower()
             }
         }
@@ -278,8 +275,7 @@ myChance.addEventListener("click", myFunction => {
     let checkIfAllDiceSelected = ( oneArray.length + twoArray.length + threeArray.length + fourArray.length + fiveArray.length + sixArray.length)
     if(chanceOne === null){
         if(checkIfAllDiceSelected === 5){
-            let d = document.getElementById("chances")
-            d.innerHTML= totalDice()
+            thisChance.innerHTML= totalDice()
             chanceOne = Number(totalDice())
             reset()
             rolledDiv.innerHTML = ""
@@ -298,6 +294,7 @@ myChance.addEventListener("click", myFunction => {
 
 
 //yahtzee bonus
+let bonusYahtzeeTracker = null
 let numberOfBonusYahtzee = 0
 let myYahtzeeBonus = document.getElementById("yahtzeeBonus")
 myYahtzeeBonus.addEventListener("click", myFunction => {
@@ -306,17 +303,17 @@ myYahtzeeBonus.addEventListener("click", myFunction => {
         if(numberOfYahtzees === 1 && numberOfBonusYahtzee < 3){
             if(oneArray.length === 5 || twoArray.length === 5 || threeArray.length === 5 || fourArray.length === 5 || fiveArray.length === 5 || sixArray.length === 5){
                 numberOfBonusYahtzee++
-                let c = document.getElementById("bonusYahtzee")
-                c.innerHTML = (numberOfBonusYahtzee.toString())
+                bonusYahtzeeTracker++
+                thisYahtzeeBonus.innerHTML = (numberOfBonusYahtzee.toString())
                 reset()
                 rolledDiv.innerHTML = ""
                 keptDiv.innerHTML = ""
                 addLower()
             }
             else{
-                let c = document.getElementById("bonusYahtzee")
-                c.innerHTML = "0"
+                thisYahtzeeBonus.innerHTML = "0"
                 numberOfYahtzees = 0
+                bonusYahtzeeTracker = 0
                 addLower()
             }
         }
@@ -344,10 +341,9 @@ function totalDice(){
 }
 
 function addLower(){
-    let l = document.getElementById("lowerScore")
-    if(threeOfkind != null && fourOfkind != null && oneFullHouse != null && smallSt != null && oneLargeStraight != null && oneYahtzee != null && chanceOne != null){
-        lowerTotal = threeOfkind + fourOfkind + oneFullHouse + smallSt + oneLargeStraight + oneYahtzee + (numberOfBonusYahtzee * 100)
-        l.innerHTML = lowerTotal.toString()
+    if(threeOfkind != null && fourOfkind != null && oneFullHouse != null && smallSt != null && oneLargeStraight != null && oneYahtzee != null && chanceOne != null && bonusYahtzeeTracker != null){
+        lowerTotal = threeOfkind + fourOfkind + oneFullHouse + smallSt + oneLargeStraight + oneYahtzee + chanceOne + (numberOfBonusYahtzee * 100)
+        thisLowerTotal.innerHTML = lowerTotal.toString()
         totalScore()
 
     }
@@ -357,11 +353,46 @@ function addLower(){
 }
 
 function totalScore(){
-    let x = document.getElementById("grandTotal")
     if(upperTotal != null && lowerTotal != null){
-        x.innerHTML = (upperTotal + lowerTotal).toString()
+        thisTotalScore.innerHTML = (upperTotal + lowerTotal).toString()
+        bestGame()
     }
     else{
         
     }
+}
+
+function bestGame(){
+    let scoreTotal = upperTotal + lowerTotal
+    if(scoreTotal > bestScore){
+        bestScore = bestScore + scoreTotal
+        thisBestGmae.innerHTML = ("Best game: " + bestScore)
+        resetLower()
+        resetUpper()
+    }
+}
+function resetLower(){
+    numberOfYahtzees = null
+    lowerTotal = null
+    bestScore = 0
+    threeOfkind = null
+    fourOfkind = null
+    oneFullHouse = null
+    smallSt = null
+    oneLargeStraight = null
+    oneYahtzee = null
+    chanceOne = null
+    bonusYahtzeeTracker = null
+    numberOfBonusYahtzee = 0
+    thisThreeOfAKind.innerHTML = ""
+    thisFourOfAKind.innerHTML = ""
+    thisFullHouse.innerHTML = ""
+    thisSmallStraight.innerHTML = ""
+    thisLargeStraight.innerHTML = ""
+    thisYahtzee.innerHTML = ""
+    thisChance.innerHTML = ""
+    thisYahtzeeBonus.innerHTML = ""
+    thisBonus.innerHTML = ""
+    thisLowerTotal.innerHTML = ""
+    thisTotalScore.innerHTML = ""
 }

@@ -2,7 +2,16 @@ let rolledDiv = document.getElementById("rolledDiv")
 let keptDiv = document.getElementById("keptDiv")
 let upperTotal = null
 
-
+//DOM select for each score
+let thisOne = document.getElementById("recordAces")
+let thisTwo = document.getElementById("recordTwos")
+let thisThree = document.getElementById("recordThrees")
+let thisFour = document.getElementById("recordFours")
+let thisFive = document.getElementById("recordFives")
+let thisSix = document.getElementById("recordSixes")
+let thisUpperScore = document.getElementById("recordUpperScore")
+let thisUpperBonus = document.getElementById("recordUpperBonus")
+let thisUpperTotalScore = document.getElementById("recordUpperTotalScore")
 
 //aces
 let one = null
@@ -12,8 +21,7 @@ myAces.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(one === null){
             one = (oneArray.length*1).toString()
-            let a = document.getElementById("recordAces")
-            a.innerHTML = one
+            thisOne.innerHTML = one
             reset()
             addUpper()
             rolledDiv.innerHTML = ""
@@ -36,8 +44,7 @@ myTwos.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(two === null){
             two = (twoArray.length*2).toString()
-            let a = document.getElementById("recordTwos")
-            a.innerHTML = two
+            thisTwo.innerHTML = two
             reset()
             addUpper()
             rolledDiv.innerHTML = ""
@@ -60,8 +67,7 @@ myThrees.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(three === null){
             three = (threeArray.length*3).toString()
-            let a = document.getElementById("recordThrees")
-            a.innerHTML = three
+            thisThree.innerHTML = three
             reset()
             addUpper()
             rolledDiv.innerHTML = ""
@@ -85,8 +91,7 @@ myFours.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(four === null){
         four = (fourArray.length*4).toString()
-        let a = document.getElementById("recordFours")
-        a.innerHTML = four
+        thisFour.innerHTML = four
         reset()
         addUpper()
         rolledDiv.innerHTML = ""
@@ -110,8 +115,7 @@ myFives.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(five === null){
             five = (fiveArray.length*5).toString()
-            let a = document.getElementById("recordFives")
-            a.innerHTML = five
+            thisFive.innerHTML = five
             reset()
             addUpper()
             rolledDiv.innerHTML = ""
@@ -135,8 +139,7 @@ mySixes.addEventListener("click", myFunction => {
     if(checkIfAllDiceSelected === 5){
         if(six === null){
             six = (sixArray.length*6).toString()
-            let a = document.getElementById("recordSixes")
-            a.innerHTML = six
+            thisSix.innerHTML = six
             reset()
             addUpper()
             rolledDiv.innerHTML = ""
@@ -164,26 +167,39 @@ function reset(){
     numberOfRolls = 0
 }
 function addUpper(){
-    let a = document.getElementById("recordUpperScore")
+    
     if(one != null && two != null && three != null && four != null && five != null && six != null){
         upperTotal = Number(one) + Number(two) + Number(three) + Number(four) + Number(five) + Number(six)
         totalScore()
         if(upperTotal >= 63){
-            
-            a.innerHTML = ((upperTotal.toString()))
-            let u = document.getElementById("recordUpperBonus")
-            u.innerHTML = "35"
+            thisUpperScore.innerHTML = ((upperTotal.toString()))
+            thisUpperBonus.innerHTML = "35"
             upperTotal = upperTotal + 35
         }
         else{
-            a.innerHTML = ((upperTotal.toString()))
-            let u = document.getElementById("recordUpperBonus")
-            u.innerHTML = "0"
+            thisUpperScore.innerHTML = ((upperTotal.toString()))
+            thisUpperBonus.innerHTML = "0"
         }
-        let ut = document.getElementById("recordUpperTotalScore")
-        ut.innerHTML = (upperTotal.toString())
+        thisUpperTotalScore.innerHTML = (upperTotal.toString())
     }
     else{
 
     }
+}
+function resetUpper(){
+    one = null
+    two = null
+    three = null
+    four = null
+    five = null
+    six = null
+    thisOne.innerHTML = ""
+    thisTwo.innerHTML = ""
+    thisThree.innerHTML = ""
+    thisFour.innerHTML = ""
+    thisFive.innerHTML = ""
+    thisSix.innerHTML = ""
+    thisUpperScore.innerHTML = ""
+    thisUpperBonus.innerHTML = ""
+    thisUpperTotalScore.innerHTML = ""
 }
