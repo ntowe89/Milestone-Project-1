@@ -14,6 +14,7 @@
             <h4>The SHAKE, SCORE, and SHOUT GAME</h4>
             <input type="submit" value="ROLL DICE" id="rollButton">
             <p id = "promptMessage"></p>
+            <p id="yourScore"></p>
             <p id="bestGame"></p>
         </div>
         <div id="div2">
@@ -39,57 +40,57 @@
                             <img src="assets/dice_1.png" alt="Picture of dice face 1" id="scoreDice"> = 1
                         </td>
                         <td>COUNT AND ADD <br> ONLY ACES</td>
-                        <td id="recordAces"></td>
+                        <td id="recordAces" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="TWOS"  id="twos"  class="scoreButton">
                             <img src="assets/dice_2.png" alt="Picture of dice face two" id="scoreDice"> = 2</td>
                         <td>COUNT AND ADD <br> ONLY TWOS</td>
-                        <td id="recordTwos"></td>
+                        <td id="recordTwos" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="THREES"  id="threes"  class="scoreButton">
                             <img src="assets/dice_3.png" alt="Picture of dice face three" id="scoreDice"> = 3</td>
                         <td>COUNT AND ADD <br> ONLY THREES</td>
-                        <td id="recordThrees"></td>
+                        <td id="recordThrees" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="FOURS"  id="fours"  class="scoreButton">
                             <img src="assets/dice_4.png" alt="Picture of dice face four" id="scoreDice"> = 4</td>
                         <td>COUNT AND ADD <br> ONLY FOURS</td>   
-                        <td id="recordFours"></td>
+                        <td id="recordFours" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="FIVES"  id="fives"  class="scoreButton">
                             <img src="assets/dice_5.png" alt="Picture of dice face five" id="scoreDice"> = 5 </td>
                         <td>COUNT AND ADD <br> ONLY FIVES</td>   
-                        <td id="recordFives"></td>
+                        <td id="recordFives" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="SIXES" id="sixes" class="scoreButton">
                             <img src="assets/dice_6.png" alt="Picture of dice face six" id="scoreDice"> = 6 </td>
                         <td>COUNT AND ADD <br> ONLY SIXES</td>   
-                        <td id="recordSixes"></td>
+                        <td id="recordSixes" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>TOTAL SCORE</td>
                         <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
-                        <td id="recordUpperScore"></td>
+                        <td id="recordUpperScore" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>BONUS <br> IF TOTAL SCORE IS 63 OR OVER</td>
                         <td>SCORE 35</td>
-                        <td id="recordUpperBonus"></td>
+                        <td id="recordUpperBonus" class="myScore"></td>
                     </tr>
                     <tr>
                         <td> TOTAL <br> OF UPPER SECTION</td>
                         <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
-                        <td id="recordUpperTotalScore"></td>
+                        <td id="recordUpperTotalScore" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>LOWER SECTION</td>
@@ -99,63 +100,63 @@
                     <tr>
                         <td> <input type="submit" value="3 OF A KIND" id="threeOfAKind"  class="scoreButton"> </td>
                         <td>ADD TOTAL <br> OF ALL DICE</td>
-                        <td id="threeKind"></td>
+                        <td id="threeKind" class="myScore"></td>
                     </tr>
                     <tr>
                         <td> <input type="submit" value="4 OF A KIND" id="fourOfAKind"   class="scoreButton"> </td>
                         <td>ADD TOTAL <br> OF ALL DICE</td>
-                        <td id="fourKind"></td>
+                        <td id="fourKind" class="myScore"></td>
                     </tr>
                     <tr>
                         <td> <input type="submit" value="FULL HOUSE" id="fullHouse"  class="scoreButton"> </td>
                         <td>SCORE 25</td>
-                        <td id="FH"></td>
+                        <td id="FH" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="SM STRAIGHT" id="smallStraight"   class="scoreButton"> 
                             <br> SEQUENCE OF FOUR</td>
                         <td>SCORE 30</td>
-                        <td id="smStraight"></td>
+                        <td id="smStraight" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="LG STRAIGHT" id="largeStraight"   class="scoreButton">
                             <br> SEQUENCE OF FIVE</td>
                         <td>SCORE 40</td>
-                        <td id = "lgStraight"></td>
+                        <td id = "lgStraight" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="submit" value="YAHTZEE" id="firstYahtzee"  class="scoreButton">
                             <br> 5 OF A KIND</td>
                         <td>SCORE 50</td>
-                        <td id="recordFirstYahtzee"></td>
+                        <td id="recordFirstYahtzee" class="myScore"></td>
                     </tr>
                     <tr>
                         <td> <input type="submit" value="CHANCE" id="chance"  class ="scoreButton"> </td>
                         <td>SCORE TOTAL <br> OF ALL 5 DICE</td>
-                        <td id="chances"></td>
+                        <td id="chances" class="myScore"></td>
                     </tr>
                     <tr>
                         <td> <input type="submit" value="YAHTZEE BONUS" id="yahtzeeBonus"  class="scoreButton"> </td>
                         <td>1 FOR EACH BONUS <br> UP TO THREE </td>
-                        <td id="bonusYahtzee"></td>
+                        <td id="bonusYahtzee" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>BONUS</td>
                         <td>SCORE 100 PER <br> ADDITIONAL YAHTZEE</td>
-                        <td id="bonus"></td>
+                        <td id="bonus" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>TOTAL <br> OF LOWER SECTION</td>
                         <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
-                        <td id="lowerScore"></td>
+                        <td id="lowerScore" class="myScore"></td>
                     </tr>
                     <tr>
                         <td>GRAND TOTAL</td>
                         <td> <img src="assets/rightArrow.png" alt="an arrow pointing right" id="arrow"> </td>
-                        <td id="grandTotal"></td>
+                        <td id="grandTotal" class="myScore"></td>
                     </tr>
                 </table>
             </div>

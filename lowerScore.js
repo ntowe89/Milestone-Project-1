@@ -16,7 +16,7 @@ let thisChance = document.getElementById("chances")
 let thisLowerTotal = document.getElementById("lowerScore")
 let thisTotalScore = document.getElementById("grandTotal")
 let thisBestGmae = document.getElementById("bestGame")
-
+let playAgain = document.createElement("button")
 
 //3 of a kind 
 let threeOfkind = null
@@ -367,10 +367,11 @@ function totalScore(){
 
 function bestGame(){
     let scoreTotal = upperTotal + lowerTotal
+    let yourScore = document.getElementById("yourScore")
+    yourScore.innerHTML = "Your score: " + scoreTotal.toString()
     if(scoreTotal > bestScore){
         bestScore = bestScore + scoreTotal
         thisBestGmae.innerHTML = ("Best game: " + bestScore)
-        let playAgain = document.createElement("button")
         playAgain.innerHTML = "Play Again"
         playAgain.setAttribute("id", "rollButton")
         document.getElementById("div1").appendChild(playAgain)
@@ -378,6 +379,7 @@ function bestGame(){
             resetLower()
             resetUpper()
             playAgain.remove()
+            yourScore.remove()
         })
     }
 }
