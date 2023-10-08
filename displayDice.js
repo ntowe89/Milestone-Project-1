@@ -6,7 +6,6 @@ let fiveArray = []
 let sixArray = []
 
 
-
 function displayDice(array){
     let rolledDiv = document.getElementById("rolledDiv")
     let keptDiv = document.getElementById("keptDiv")
@@ -156,5 +155,4 @@ function displayDice(array){
             })
         }
     }
-    numberOfRolls++
 }

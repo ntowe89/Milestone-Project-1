@@ -193,6 +193,7 @@ function resetUpper(){
     four = null
     five = null
     six = null
+    upperTotal = null
     thisOne.innerHTML = ""
     thisTwo.innerHTML = ""
     thisThree.innerHTML = ""

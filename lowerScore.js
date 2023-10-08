@@ -314,6 +314,9 @@ myYahtzeeBonus.addEventListener("click", myFunction => {
                 thisYahtzeeBonus.innerHTML = "0"
                 numberOfYahtzees = 0
                 bonusYahtzeeTracker = 0
+                reset()
+                rolledDiv.innerHTML = ""
+                keptDiv.innerHTML = ""
                 addLower()
             }
         }
@@ -367,10 +370,21 @@ function bestGame(){
     if(scoreTotal > bestScore){
         bestScore = bestScore + scoreTotal
         thisBestGmae.innerHTML = ("Best game: " + bestScore)
-        resetLower()
-        resetUpper()
+        let playAgain = document.createElement("button")
+        playAgain.innerHTML = "Play Again"
+        playAgain.setAttribute("id", "rollButton")
+        document.getElementById("div1").appendChild(playAgain)
+        playAgain.addEventListener("click", myFunction => {
+            resetLower()
+            resetUpper()
+            playAgain.remove()
+        })
+
+       
     }
 }
+
+
 function resetLower(){
     numberOfYahtzees = null
     lowerTotal = null

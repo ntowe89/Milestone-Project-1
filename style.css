@@ -1,58 +1,104 @@
 #main{
-    display: flex;
-
-}
-#playing{
-    width: 60%;
-    border-style: solid;
-    border-color: black;
-    border-width: 3px 1.5px 3px 3px;
-    height: 100vh;
-}
-#div1{
-    height: 20%;
-    border: 3px solid black;
-}
-#rolledDiv{
-    height: 39%;
-    border: 3px solid black;
-}
-#keptDiv{
-    height: 39%;
-    border: 3px solid black;
-}
-#scoring{
-    width: 40%;
-    border-style: solid;
-    border-color: black;
-    border-width: 3px 1.5px 3px 3px;
-    height: 100vh;
-    padding: 0px 5px;
-}
-#diceFace{
-    width: 150px;
-    height: 150px;
-}
-#scoreDice{
-    width: 15px;
-    height: 15px;
+    margin: .5%;
+    background-color: #B73E3E;
+    border-radius: 20px;
+    border: 2px solid black;
 }
 #arrow{
     height: 20px;
     width: 70px;
 }
-h1{
-    text-align: center;
+#diceFace{
+    width: 150px;
+    height: 150px;
 }
-table{
+#div1{
+    height: 10%;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+#div2{
+    display: flex;
+    height: 90%;
+}
+#keptDiv{
+    height: 50%;
+}
+#myTable{
+    background-color: antiquewhite;
     text-align: center;
     font-size: 12px;
-    border: 1px solid black;
     width: 100%;
+}
+#playing{
+    width: 60%;
+    
+    height: 100vh;
+}
+#promptMessage{
+    color: #F6FA70;
+    margin: 0;
+}
+#rollButton{
+    margin: auto;
+    padding: 5px;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color:#1E6FD9;
+    color: white;
+}
+#rolledDiv{
+    height: 50%;
+    border-bottom: 2px solid black;
+}
+
+#scoring{
+    width: 40%;
+    border-left: 2px solid black;
+    height: 100vh;
+    padding: 0px 5px;
+    background-color: antiquewhite;
+    border-radius: 0 0 20px 0;
+}
+#scoreDice{
+    width: 15px;
+    height: 15px;
+}
+.scoreButton{
+    padding: 5px;
+    border-radius: 12px;
+    background-color: #1E6FD9;
+    color: white;
+}
+body{
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #F6FDC3;
+    padding: 1%;
+    margin: 0;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+h2{
+    text-align: center;
+    color: black;
+    
+}
+h4{
+    text-align: center;
+    color:#F6FA70;
+    margin: 5px;
+}
+th{
+    height: 70px;
 }
 th, td{
     border: 1px solid black;
-}
-body{
-    margin: 0px;
+    border-radius: 5px;
 }
