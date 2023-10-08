@@ -38,7 +38,7 @@
     height: 100vh;
 }
 #rollButton{
-    margin: 10px auto 0 auto;
+    margin: 10px auto 5px auto;
     padding: 8px;
     border-radius: 12px;
     font-size: 16px;
@@ -98,7 +98,7 @@ h4{
 }
 p{
     color: #F6FA70;
-    
+    text-align: center;
 }
 th{
     height: 70px;

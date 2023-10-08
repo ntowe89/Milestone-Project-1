@@ -378,6 +378,7 @@ function bestGame(){
         playAgain.addEventListener("click", myFunction => {
             resetLower()
             resetUpper()
+            prompt(numberOfRolls)
             playAgain.remove()
             yourScore.remove()
         })
