@@ -2,6 +2,7 @@ let rolledDiv = document.getElementById("rolledDiv")
 let keptDiv = document.getElementById("keptDiv")
 let upperTotal = null
 
+
 //DOM select for each score
 let thisOne = document.getElementById("recordAces")
 let thisTwo = document.getElementById("recordTwos")

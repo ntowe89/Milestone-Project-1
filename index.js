@@ -8,7 +8,6 @@ function main() {
     myButton.addEventListener("click", myFunction => {
         numberOfRolls++
         prompt(numberOfRolls)
-        console.log("the number of rolls are " + numberOfRolls)
         rollDice(numberOfRolls)
     })
 }

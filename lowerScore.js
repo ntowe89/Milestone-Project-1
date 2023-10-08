@@ -379,8 +379,6 @@ function bestGame(){
             resetUpper()
             playAgain.remove()
         })
-
-       
     }
 }
 

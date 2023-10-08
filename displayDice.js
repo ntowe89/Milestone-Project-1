@@ -32,8 +32,6 @@ function displayDice(array){
                     oneArray.pop()
                     clicksOne--
                 }
-                console.log("This is one")
-                console.log(oneArray)
             })
         }
 
@@ -56,8 +54,6 @@ function displayDice(array){
                     twoArray.pop()
                     clicksTwo--
                 }
-                console.log("This is two")
-                console.log(twoArray)
             })
         }
         if(array[i] === 3){
@@ -77,9 +73,7 @@ function displayDice(array){
                     rolledDiv.append(diceThree)
                     threeArray.pop()
                     clicksThree--
-                }
-                console.log("This is three")
-                console.log(threeArray)
+                } 
             })
         }
         if(array[i] === 4){
@@ -101,9 +95,6 @@ function displayDice(array){
                     clicksFour--
                     
                 }
-                console.log("This is four")
-                console.log(fourArray)
-                
             })
         }
 
@@ -126,8 +117,6 @@ function displayDice(array){
                     fiveArray.pop()
                     clicksFive--
                 }
-                console.log("This is five")
-                console.log(fiveArray)
             })
         }
 
@@ -150,8 +139,6 @@ function displayDice(array){
                     sixArray.pop()
                     clicksSix--
                 }
-                console.log("This is six")
-                console.log(sixArray)
             })
         }
     }
