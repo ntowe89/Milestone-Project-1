@@ -1,7 +1,7 @@
 let numberOfYahtzees = null
 let lowerTotal = null
 let bestScore = 0
-
+let scoreTotal = null
 
 //DOM select for each score
 let thisThreeOfAKind = document.getElementById("threeKind")
@@ -366,7 +366,7 @@ function totalScore(){
 }
 
 function bestGame(){
-    let scoreTotal = upperTotal + lowerTotal
+    scoreTotal = upperTotal + lowerTotal
     let yourScore = document.getElementById("yourScore")
     yourScore.innerHTML = "Your score: " + scoreTotal.toString()
     if(scoreTotal > bestScore){
@@ -380,13 +380,14 @@ function bestGame(){
             resetUpper()
             prompt(numberOfRolls)
             playAgain.remove()
-            yourScore.remove()
+            yourScore.innerHTML = ""
         })
     }
 }
 
 
 function resetLower(){
+    bestScore = 0
     numberOfYahtzees = null
     lowerTotal = null
     bestScore = 0

@@ -155,18 +155,7 @@ mySixes.addEventListener("click", myFunction => {
     }
 })
 
-function reset(){
-    rollOne = []
-    rollTwo = []
-    rollThree = []
-    oneArray = []
-    twoArray = []
-    threeArray = []
-    fourArray = []
-    fiveArray = []
-    sixArray = []
-    numberOfRolls = 0
-}
+
 function addUpper(){
     
     if(one != null && two != null && three != null && four != null && five != null && six != null){
@@ -187,6 +176,20 @@ function addUpper(){
 
     }
 }
+
+function reset(){
+    rollOne = []
+    rollTwo = []
+    rollThree = []
+    oneArray = []
+    twoArray = []
+    threeArray = []
+    fourArray = []
+    fiveArray = []
+    sixArray = []
+    numberOfRolls = 0
+}
+
 function resetUpper(){
     one = null
     two = null
